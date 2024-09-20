@@ -1,0 +1,160 @@
+/* Основні стилі */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f9fb;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.resume-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Заголовки */
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #34495e;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+p, ul {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 25px;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+    color: #3498db;
+}
+
+ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-size: 24px;
+}
+
+/* Контактна інформація */
+.contacts a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contacts a:hover {
+    color: #2ecc71;
+}
+
+.resume-container section {
+    padding: 15px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.resume-container section:last-child {
+    border-bottom: none;
+}
+
+.personal-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.personal-info p {
+    font-size: 22px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Адаптація під мобільні екрани */
+@media (max-width: 600px) {
+    .resume-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p, ul li {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p, ul li {
+        font-size: 14px;
+    }
+}
